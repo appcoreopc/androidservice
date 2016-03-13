@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <TextView android:text="Hello World!" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_marginTop="127dp"
+        android:layout_below="@+id/textViewPurpose"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView android:text="IntentService" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewIntentService"
+        android:layout_marginLeft="59dp"
+        android:layout_marginStart="59dp"
+        android:layout_above="@+id/btnTimestamp"
+        android:layout_toRightOf="@+id/btnTimestamp"
+        android:layout_toEndOf="@+id/btnTimestamp" />
+
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Timestamp"
+        android:id="@+id/btnTimestamp"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop service"
+        android:id="@+id/btnStop"
+        android:layout_below="@+id/btnTimestamp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:layout_alignRight="@+id/btnStartAsync"
+        android:layout_alignEnd="@+id/btnStartAsync" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start service async"
+        android:id="@+id/btnStartAsync"
+        android:layout_below="@+id/btnStop"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="28dp"
+        android:layout_alignRight="@+id/btnHandler"
+        android:layout_alignEnd="@+id/btnHandler" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Purpose "
+        android:id="@+id/textViewPurpose"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thread Handler"
+        android:id="@+id/btnHandler"
+        android:layout_below="@+id/btnStartAsync"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="23dp"
+        android:layout_alignRight="@+id/textViewIntentService"
+        android:layout_alignEnd="@+id/textViewIntentService" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Result Receiver"
+        android:id="@+id/bntResultReceiver"
+        android:layout_below="@+id/btnHandler"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/btnHandler"
+        android:layout_alignEnd="@+id/btnHandler" />
+
+</RelativeLayout>
